@@ -1,0 +1,85 @@
+.page-content {
+    #home-product {
+        background: lavender;
+        .container {
+            border: 2px solid #555;
+            background: #fff;
+            padding: 0px;
+            .border-next {
+                margin: 5px;
+                border: 2px solid #555;
+                padding: 0px 40px;
+                background: url('../../images/gh-blue-grid.svg');
+                background-size: 20%;
+                .header-product {
+                    text-align: center;
+                    h2 {
+                        font-family: Neutra_Bold;
+                        font-size: 40px;
+                        span {
+                            padding-top: 160px;
+                            padding-bottom: 50px;
+                        }
+                        &::before {
+                            content: "";
+                            width: 100%;
+                            background: url("../../images/institute-logo.png") no-repeat center center;
+                            display: block;
+                            height: 144px;
+                            background-size: contain;
+                        }
+                        &::after {
+                            content: "";
+                            width: 100%;
+                            background: url("../../images/institute-star.png") no-repeat center center;
+                            display: block;
+                            height: 30px;
+                            background-size: contain;
+                        }
+                    }
+                }
+                .products {
+                    .item-product-lg {
+                        .thumbnail-product-lg {
+                            overflow: hidden;
+                            img {
+                                width: 100%;
+                                transition: .4s ease;
+                                cursor: pointer;
+                            }
+                            &:hover img {
+                                transform: scale(1.01);
+                            }
+                        }
+                        .title-product-lg {
+                            margin-top: 20px;
+                            margin-bottom: 50px;
+                            text-align: center;
+                            @extend .btn-ideas;
+                            @extend .btn-ideas-shadow;
+                        }
+                    }
+                    .item-product-sm {
+                        margin: 10px;
+                        .thumbnail-product-sm {
+                            overflow: hidden;
+                            img {
+                                width: 100%;
+                                transition: .4s ease;
+                                cursor: pointer;
+                            }
+                            &:hover img {
+                                transform: scale(1.05);
+                            }
+                        }
+                        .title-product-sm {
+                            text-align: center;
+                            font-family: Neutra_Light;
+                            padding: 15px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

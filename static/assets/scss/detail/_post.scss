@@ -1,0 +1,52 @@
+#content {
+    margin-top: 20px;
+    padding: 50px 10px;
+    .title-post {
+        padding: 20px;
+        h1 {
+            font-size: 40px;
+            font-family: ArcherBold;
+        }
+    }
+    .category-post {
+        padding: 10px;
+        ul {
+            li {
+                display: inline-block;
+                padding: 4px 15px;
+                margin: 0px 10px;
+                background: #9fd8ce;
+                border-radius: 18px;
+                color: #fff;
+                box-shadow: 1px 3px 9px #5555552e;
+                cursor: pointer;
+            }
+        }
+    }
+    .description-post {
+        padding: 20px;
+    }
+    .author-post {
+        font-style: italic;
+        font-size: 15px;
+    }
+    .content-post {
+        font-family: Archer;
+        font-size: 18px;
+    }
+    .thumbnail-post {
+        width: 100%;
+        text-align: center;
+        padding: 20px 0px;
+        img {
+            max-width: 100%;
+        }
+    }
+}
+
+.derma-line {
+    width: 60px;
+    height: 6px;
+    background: #8fd5db;
+    margin: 20px 0px;
+}

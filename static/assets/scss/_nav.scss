@@ -1,0 +1,179 @@
+.navigation {
+    background: $white;
+    border-bottom: 1px solid lavender;
+    @extend ._relative;
+    .nav-item-logo {
+        img {
+            width: 54px;
+        }
+        margin: 0px 20px;
+    }
+    .logo-mobile {
+        display: none;
+        img {
+            width: 54px;
+        }
+    }
+    .nav-item {
+        padding: 10px 20px;
+        a {
+            color: $black;
+            font-family: ArcherBold;
+            text-transform: uppercase;
+            &:hover {
+                text-decoration: none;
+            }
+        }
+    }
+    .mobile {
+        display: none;
+    }
+    .search-nav {
+        float: right;
+        text-align: right;
+        width: 100%;
+    }
+    .navigation-left {
+        position: fixed;
+        top: 0;
+        left: -1600px;
+        z-index: 1000;
+        min-width: 300px;
+        width: 70%;
+        max-width: 400px;
+        background: #fff;
+        height: 100%;
+        overflow-y: scroll;
+        transition: .8s;
+        transition-timing-function: cubic-bezier(.5, 1.6, .4, .7);
+        transform-origin: 0 0;
+        &::-webkit-scrollbar-track {
+            // -webkit-box-shadow: inset 0 0 6px #002a4e;
+            border-radius: 10px;
+            background-color: rgba(255, 255, 255, .7)
+        }
+        &::-webkit-scrollbar {
+            width: 6px;
+            background-color: #fff
+        }
+        &::-webkit-scrollbar-thumb {
+            border-radius: 10px;
+            // -webkit-box-shadow: inset 0 0 6px #002a4e;
+            background-color: $black;
+        }
+        .logo-navigation-left {
+            padding: 10px 0px;
+            text-align: center;
+            width: 100%;
+        }
+        ul {
+            padding-left: 20px;
+            font-family: ArcherBold;
+            font-size: 16px;
+            li {
+                text-transform: uppercase;
+                list-style: none;
+                color: #555;
+                padding: 10px;
+                @extend .cursor;
+                a {
+                    color: #555;
+                    text-transform: uppercase;
+                    &:hover {
+                        text-decoration: none;
+                    }
+                }
+            }
+            li.has-sub {
+                position: relative;
+                ul {
+                    display: none;
+                }
+                &::before {
+                    content: "\efc2";
+                    font-family: icoFont;
+                    position: absolute;
+                    right: 11px;
+                    font-size: 16px;
+                    text-align: center;
+                    color: #555;
+                    @extend .cursor;
+                    top: 6px;
+                }
+                .sub-item-mobile {
+                    font-size: 15px;
+                    li {
+                        padding: 5px 10px;
+                        border-bottom: 1px solid #e4e4e4;
+                    }
+                }
+            }
+            li.has-sub.active {
+                &::before {
+                    content: "\ef9a";
+                }
+            }
+        }
+        .close-nav-left {
+            position: absolute;
+            right: 0px;
+            top: -10px;
+            cursor: pointer;
+            font-size: 40px;
+            color: #555;
+        }
+    }
+    .momo {
+        transition: .3s;
+    }
+    .momo.active {
+        background: rgba(0, 0, 0, .4);
+        width: 100%;
+        height: 100%;
+        position: fixed;
+        top: 0px;
+        z-index: 2;
+    }
+    .navigation-left.active {
+        left: 0px;
+    }
+}
+
+.navigation.fixed {
+    position: fixed;
+    top: 0px;
+    width: 100%;
+    z-index: 9999;
+    top: -100px;
+    animation: .7s downs forwards;
+}
+
+@keyframes downs {
+    0% {
+        top: -100px
+    }
+    100% {
+        top: 0px;
+    }
+}
+
+@media(max-width: 991px) {
+    .navigation {
+        .mobile {
+            display: block;
+            font-size: 22px;
+            position: absolute;
+            z-index: 99;
+        }
+        .search-nav {
+            font-size: 22px;
+        }
+        .logo-mobile {
+            display: block;
+            width: 100%;
+            text-align: center;
+            position: absolute;
+            z-index: -1;
+        }
+    }
+}

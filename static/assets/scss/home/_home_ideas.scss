@@ -1,0 +1,37 @@
+.page-content {
+    #home-ideas {
+        margin: 50px 0px;
+        .ideas {
+            margin-top: 50px;
+            .ideas-item {
+                margin: 10px;
+                .thumbnail-ideas {
+                    height: 360px;
+                    width: 100%;
+                    overflow: hidden;
+                    vertical-align: middle;
+                    text-align: center;
+                    img {
+                        vertical-align: middle;
+                        transition: .4s ease;
+                        height: 100%;
+                    }
+                    &:hover img {
+                        transform: scale(1.01);
+                    }
+                }
+                .ideas-item-title {
+                    text-align: center;
+                    padding: 15px 0px;
+                    h3 {
+                        font-size: 22px;
+                        font-family: MajNormal;
+                    }
+                }
+                margin-bottom: 20px;
+            }
+        }
+    }
+}
+
+@media(max-width: 911px) {}

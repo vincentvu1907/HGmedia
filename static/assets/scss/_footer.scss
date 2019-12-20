@@ -1,0 +1,43 @@
+footer {
+    padding: 100px 20px;
+    padding-bottom: 10px;
+    margin-top: 50px;
+    background: lavender;
+    .social-icon {
+        li {
+            display: inline-block;
+            padding: 10px;
+            list-style: none;
+        }
+    }
+    .end-footer {
+        width: 100%;
+        text-align: center;
+        li {
+            display: inline-block;
+            padding: 10px;
+            font-size: 13px;
+            font-family: TimesNewRoman;
+        }
+    }
+    .title-address-footer {
+        font-family: ArcherBold;
+        color: #21bdd9;
+        padding: 20px;
+        font-size: 18px;
+        text-transform: uppercase;
+    }
+    .address-footer {
+        padding: 0px 10px;
+        margin-left: 24px;
+        font-family: Archer;
+    }
+    .social-icon {
+        text-align: center;
+        i {
+            font-size: 20px;
+            line-height: 52px;
+            color: #59a6c4;
+        }
+    }
+}

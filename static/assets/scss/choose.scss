@@ -1,0 +1,44 @@
+.page-content{
+	h1{
+		font-family: ArcherBold;
+		padding: 20px;
+	}
+	.choose-item{
+		ul{
+			li.choose-categry{
+				display: inline-block;
+				padding: 5px 10px;
+				font-family: Archer;
+				font-size: 16px;
+				border-radius: 15px;
+				// border:1px solid #555;
+				cursor: pointer;
+				&:hover{
+					background: #e4e4e4;
+				}
+			}
+			li.choose-categry.active{
+				background: #ffea57;
+			}
+		}
+	}
+	.post-category{
+		margin-top: 100px;
+		.post-item{
+			margin:5px;
+			.thumbnail{
+				img{
+					width: 100%;
+				}
+			}
+			.title{
+				padding: 10px 5px;
+				text-align: center;
+				h3{
+					font-family: Archer;
+					font-size: 18px;
+				}
+			}
+		}
+	}
+}

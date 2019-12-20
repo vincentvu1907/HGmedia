@@ -1,0 +1,46 @@
+.page-content {
+    #home-custom {
+        margin-top: 50px;
+        background: $bg_thin;
+        .features {
+            .feature-item-lg {
+                margin: 10px 20px;
+                .thumbnail-lg {
+                    img {
+                        width: 100%;
+                    }
+                }
+            }
+            .feature-item-title-lg {
+                padding: 20px 0px;
+                width: 100%;
+                text-align: center;
+                h3 {
+                    font-size: 37px;
+                    font-family: MajNormal;
+                }
+            }
+            .feature-item-sm {
+                margin: 10px 0px;
+                .thumbnail-sm {
+                    img {
+                        width: 100%;
+                    }
+                }
+                .feature-item-title-sm {
+                    h3 {
+                        font-size: 16px;
+                        font-family: Archer, Roboto, "sans serif";
+                        font-weight: lighter;
+                    }
+                }
+            }
+            .demarcation {
+                height: 20px;
+                width: 100%;
+                border-bottom: 2px dotted #e4e4e4;
+                margin-bottom: 20px;
+            }
+        }
+    }
+}

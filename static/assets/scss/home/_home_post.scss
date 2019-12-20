@@ -1,0 +1,26 @@
+.page-content {
+    #home-post {
+        margin: 50px 0px;
+        padding: 40px 20px;
+    }
+    .item-post-sm {
+        margin: 5px;
+        margin-top: 40px;
+        .thumbnail-item-sm {
+            max-height: 270px;
+            overflow: hidden;
+            width: 100%;
+            img {
+                width: 100%;
+            }
+        }
+        .tite-item-sm {
+            text-align: center;
+            padding: 10px 0px;
+            h4 {
+                font-family: Archer;
+                font-size: 18px;
+            }
+        }
+    }
+}

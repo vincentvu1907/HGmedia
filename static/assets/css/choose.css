@@ -1,0 +1,28 @@
+.page-content h1 {
+  font-family: ArcherBold;
+  padding: 20px; }
+.page-content .choose-item ul li.choose-categry {
+  display: inline-block;
+  padding: 5px 10px;
+  font-family: Archer;
+  font-size: 16px;
+  border-radius: 15px;
+  cursor: pointer; }
+  .page-content .choose-item ul li.choose-categry:hover {
+    background: #e4e4e4; }
+.page-content .choose-item ul li.choose-categry.active {
+  background: #ffea57; }
+.page-content .post-category {
+  margin-top: 100px; }
+  .page-content .post-category .post-item {
+    margin: 5px; }
+    .page-content .post-category .post-item .thumbnail img {
+      width: 100%; }
+    .page-content .post-category .post-item .title {
+      padding: 10px 5px;
+      text-align: center; }
+      .page-content .post-category .post-item .title h3 {
+        font-family: Archer;
+        font-size: 18px; }
+
+/*# sourceMappingURL=choose.css.map */

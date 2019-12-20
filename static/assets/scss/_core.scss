@@ -1,0 +1,327 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto);
+@import url(https://fonts.googleapis.com/css?family=Girassol);
+@font-face {
+    font-family: Neutra_Bold;
+    src: url("../css/font/NeutrafaceCondensed-Bold.otf") format("opentype");
+}
+
+@font-face {
+    font-family: Neutra_Light;
+    src: url("../css/font/NeutrafaceCondensed-Light.otf") format("opentype");
+}
+
+@font-face {
+    font-family: TimesNewRoman;
+    src: url("../css/font/font-times-new-roman.ttf") format("opentype");
+}
+
+@font-face {
+    font-family: Archer;
+    src: url("../css/font/Archer/Archer-Book-Pro.woff") format("opentype");
+}
+
+@font-face {
+    font-family: ArcherBold;
+    src: url("../css/font/Archer/Archer-Bold-Pro.woff") format("opentype");
+}
+
+@font-face {
+    font-family: MajHeader;
+    src: url("../css/font/Maj/Majesti-Banner-Medium.otf") format("opentype");
+}
+
+@font-face {
+    font-family: MajNormal;
+    src: url("../css/font/majesti-banner-bold-webfont.ttf") format("opentype");
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    font-family: Roboto, "sans-serif";
+    // background: #e4e4e4;
+}
+
+h1,
+h2,
+h3 {
+    font-family: Neutra_Bold;
+    color: #000000bf;
+    // font-weight: bold;
+}
+
+$white: #fff;
+$black: #555;
+$font_header:Neutra_Bold;
+$font_header2:Neutra_Light;
+$blue: #061477;
+$bg_thin: #F8F3F4;
+._relative {
+    position: relative;
+}
+
+.btn-ideas {
+    padding: 15px 25px;
+    background: $white;
+    border: 2px solid $black;
+    cursor: pointer;
+    transition: .3s cubic-bezier(0.4, 0, 1, 1);
+}
+
+.btn-ideas:hover {
+    background: #d3f3e8bf;
+    transform: scale(1.0001);
+    color: #068e8e
+}
+
+.btn-ideas-shadow {
+    box-shadow: 0.625rem 0.625rem #000, 0.9375rem 0.9375rem 0 0.125rem transparent
+}
+
+.btn-ideas-shadow:hover {
+    box-shadow: 0.625rem 0.625rem #0c4c4b, 0.9375rem 0.9375rem 0 0.125rem transparent
+}
+
+.btn-default {
+    background: transparent;
+    border: transparent;
+}
+
+button {
+    cursor: pointer;
+}
+
+button:focus {
+    border: none;
+}
+
+a {
+    color: #000000bf;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+.cursor {
+    cursor: pointer;
+}
+
+.b100 {
+    width: 100%;
+    clear: both;
+    height: 100px;
+}
+
+.bg-sliver {
+    background: lavender;
+}
+
+.title-extra {
+    font-size: 68px;
+    font-family: MajHeader;
+    text-transform: capitalize;
+    font-weight: bold;
+    padding: 30px 20px;
+    @extend .cursor;
+    span {
+        border-bottom: 2px solid;
+        position: relative;
+        &::before {
+            content: "";
+            position: absolute;
+            width: 100%;
+            height: 0%;
+            background: #ffffff7d;
+            z-index: 0;
+            bottom: 0px;
+            left: 0px;
+            transition: .5s ease-in-out;
+        }
+    }
+    &:hover span::before {
+        height: 50%;
+    }
+}
+
+.title-ideas {
+    padding: 10px 30px;
+    font-size: 35px;
+    text-transform: uppercase;
+    font-weight: bolder;
+    &::before {
+        content: "\ef9c";
+        font-family: icoFont;
+        display: inline-block;
+        background: #fff;
+        z-index: 2;
+        position: relative;
+        font-size: 23px;
+        padding: 0px 20px;
+    }
+    &::after {
+        content: "";
+        border-top: 2px solid;
+        position: relative;
+        display: block;
+        margin-top: -20px;
+        z-index: 0;
+        margin-left: 60px;
+    }
+    span {
+        position: relative;
+        z-index: 2;
+        background: #fff;
+        padding-right: 20px;
+    }
+}
+
+li {
+    list-style: none;
+}
+
+#report {
+    font-family: Archer;
+    margin: 40px 0px;
+    h2 {
+        font-family: ArcherBold;
+        padding: 10px 0px;
+        margin-bottom: 20px;
+        position: relative;
+        &::before {
+            content: "";
+            background: #9fd8ce;
+            position: absolute;
+            bottom: 0px;
+            width: 60px;
+            height: 6px;
+        }
+    }
+    .input {
+        position: relative;
+        i {
+            position: absolute;
+            height: 100%;
+            padding: 9px;
+            font-size: 20px;
+        }
+        input {
+            padding-left: 40px;
+        }
+    }
+}
+
+textarea:focus,
+input:focus {
+    outline: none;
+}
+
+body {
+    position: relative;
+}
+
+.search {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, .8);
+    opacity: 0;
+    visibility: hidden;
+    transition: .4s ease-in-out;
+    padding: 20px 10px;
+    top: 0px;
+    z-index: 9999;
+    .space-input {
+        margin-top: 70px;
+        padding: 20px;
+        .search-input {
+            width: 100%;
+            height: 50px;
+            background: none;
+            border: none;
+            border-bottom: 2px solid #cac3c3;
+            font-size: 36px;
+            font-family: Archer;
+            color: #fff;
+        }
+        &::after {
+            content: "Type keyword(s) to search";
+            width: 100%;
+            padding: 5px 20px;
+            font-family: Archer;
+            color: #ffffff9e;
+        }
+        &:focus {
+            background: none;
+        }
+    }
+    .content-ajax {
+        font-size: 20px;
+        color: #ffffffd3;
+        overflow-y: scroll;
+        max-height: calc(100% - 300px);
+        border-radius: 10px;
+        background: #0000005e;
+        ul {
+            li {
+                padding: 10px 5px;
+                a {
+                    color: #ffffffd3
+                }
+                width: fit-content;
+            }
+        }
+        &::-webkit-scrollbar-track {
+            border-radius: 20px;
+            background-color: rgb(255, 255, 255)
+        }
+        &::-webkit-scrollbar {
+            width: 6px;
+            background-color: rgba(255, 255, 255, 0);
+        }
+        &::-webkit-scrollbar-thumb {
+            border-radius: 10px;
+            background-color: $black;
+        }
+    }
+    .close-search {
+        position: absolute;
+        z-index: 9999999;
+        color: #fff;
+        font-size: 50px;
+        top: 10px;
+        right: 30px;
+        cursor: pointer;
+        transition: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        &:hover {
+            color: rgb(192, 17, 17);
+        }
+    }
+}
+
+.search.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.ft-archer {
+    font-family: Archer;
+}
+
+#trust {
+    h1 {
+        font-family: MajHeader;
+        text-align: center;
+        padding: 25px;
+    }
+    .mono-trust {
+        h2 {
+            font-family: Archer;
+            font-size: 23px;
+            padding: 10px 0px;
+        }
+        .des {
+            padding: 0px 20px;
+        }
+    }
+}
